@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 위젯</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="weather-card">
+    <!-- 상단: 위치/날짜 -->
+    <div class="weather-header">
+      <div id="city-name" class="weather-city"></div>
+      <div id="local-date" class="weather-date"></div>
+    </div>
+    <!-- 현재 날씨/주요 정보 -->
+    <div class="weather-main">
+      <img id="weather-icon" src="" alt="날씨 아이콘" class="weather-icon" style="display:none;" />
+      <div class="weather-main-info">
+        <span id="temperature" class="weather-temp">0℃</span>
+        <div id="weather-desc" class="weather-desc">날씨 상태</div>
+        <div class="weather-extra">
+          <span>체감 <span id="feelslike">-℃</span></span>
+          <span>습도 <span id="humidity">-%</span></span>
+          <span>풍속 <span id="wind">- m/s</span></span>
+          <span>강수 <span id="precip">- %</span></span>
+        </div>
+      </div>
+    </div>
+    <!-- 상태 뱃지/팁 -->
+    <div class="status-badges" id="status-badges">
+      <!-- 미세먼지/자외선/강수확률 등 JS로 동적 생성 -->
+      <div id="weather-tip" class="weather-tip"></div>
+    </div>
+    <!-- 시간대별 예보 -->
+    <div class="hourly-section">
+      <div class="hourly-title">시간대별 예보</div>
+      <div id="hourly-list" class="hourly-list"></div>
+    </div>
+    <!-- 주간 예보 -->
+    <div class="weekly-section">
+      <div class="weekly-title">주간 예보</div>
+      <div id="forecast-list" class="weekly-list"></div>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>

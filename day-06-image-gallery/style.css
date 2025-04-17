@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Malgun Gothic', Arial, sans-serif;
+    background: #f6f8fa;
+}
+
+h1 {
+    text-align: center;
+    margin: 32px 0 24px 0;
+    font-size: 2.3rem;
+    color: #222;
+    letter-spacing: 2px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 13px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #eaeaea;
+    display: block;
+}
+
+.gallery-caption {
+    margin-top: 10px;
+    font-size: 1.07rem;
+    color: #444;
+    text-align: center;
+    padding: 0 6px;
+    word-break: keep-all;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    font-family: 'Segoe UI', 'Malgun Gothic', Arial, sans-serif;
+    opacity: 0.85;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #eaeaea;
+    display: block;
+}
+
+.gallery-image:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 30, 40, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background 0.2s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-size: 2.5rem;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.18s;
+}
+.modal-close:hover, .modal-close:focus {
+    background: rgba(0,0,0,0.55);
+    color: #ffdada;
+    outline: none;
+}
+
+
+.modal-image {
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    object-fit: contain;
+    animation: modal-pop 0.2s;
+}
+
+@keyframes modal-pop {
+    from { transform: scale(0.95); opacity: 0.5; }
+    to { transform: scale(1); opacity: 1; }
+}

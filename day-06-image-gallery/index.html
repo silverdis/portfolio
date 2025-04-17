@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 갤러리</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>나의 갤러리</h1>
+    <div class="gallery-container">
+        <figure class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600" alt="예시 이미지 1" class="gallery-image">
+    <figcaption class="gallery-caption">Yosemite Valley</figcaption>
+</figure>
+        <figure class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=1600" alt="예시 이미지 2" class="gallery-image">
+    <figcaption class="gallery-caption">Night Sky</figcaption>
+</figure>
+        <figure class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=1600" alt="예시 이미지 3" class="gallery-image">
+    <figcaption class="gallery-caption">Beach Chair</figcaption>
+</figure>
+    </div>
+    <script src="script.js"></script>
+    <!-- 이미지 모달 오버레이 -->
+    <div id="image-modal" class="modal-overlay" style="display:none;">
+    <button id="modal-close" class="modal-close" aria-label="닫기">&times;</button>
+    <img id="modal-img" class="modal-image" src="" alt="크게 보기">
+</div>
+</body>
+</html>

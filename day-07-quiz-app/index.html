@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 퀴즈 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h2 id="question">여기에 질문이 표시됩니다.</h2>
+        <div id="choices">
+            <!-- 선택지 버튼들이 여기에 동적으로 추가됩니다. -->
+        </div>
+        <button id="next-btn" disabled>다음</button>
+    </div>
+    <div id="score" style="display:none; text-align:center;">
+        <!-- 최종 점수가 여기에 표시됩니다. -->
+        <button id="retry-btn" style="margin-top:18px; padding:10px 30px; font-size:1rem; border-radius:8px; background:#0097e6; color:#fff; border:none; cursor:pointer;">다시 풀기</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

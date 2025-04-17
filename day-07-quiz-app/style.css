@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f6fa 0%, #dff9fb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#quiz-container {
+    background: #fff;
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+    width: 370px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+#question {
+    margin-bottom: 18px;
+    font-size: 1.28rem;
+    color: #273c75;
+    font-weight: 600;
+    background: #f1f2f6;
+    padding: 18px 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+    width: 100%;
+    letter-spacing: 0.01em;
+}
+#choices {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 18px;
+    width: 100%;
+    align-items: center;
+}
+#choices button {
+    padding: 12px 0;
+    width: 90%;
+    border: 1.5px solid #dcdde1;
+    background: #f1f2f6;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, border 0.18s;
+    color: #353b48;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(44, 62, 80, 0.03);
+}
+#choices button:hover:not(:disabled) {
+    background: #dff9fb;
+    color: #0097e6;
+    border-color: #00a8ff;
+    box-shadow: 0 2px 8px rgba(0, 168, 255, 0.08);
+}
+#choices button:active:not(:disabled) {
+    background: #00a8ff;
+    color: #fff;
+    border-color: #0097e6;
+}
+#choices button.selected {
+    background: #4cd137;
+    color: #fff;
+    border-color: #44bd32;
+    box-shadow: 0 2px 8px rgba(76, 209, 55, 0.12);
+}
+#next-btn {
+    padding: 12px 38px;
+    font-size: 1.08rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #273c75 60%, #0097e6 100%);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    transition: background 0.18s, box-shadow 0.18s;
+    margin-top: 6px;
+}
+#next-btn:hover:not(:disabled) {
+    background: linear-gradient(90deg, #0097e6 0%, #273c75 100%);
+    box-shadow: 0 4px 16px rgba(0, 151, 230, 0.10);
+}
+#next-btn:disabled {
+    background: #dcdde1;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+#score {
+    margin-top: 20px;
+    font-size: 1.13rem;
+    color: #192a56;
+    font-weight: bold;
+    background: #f1f2f6;
+    border-radius: 8px;
+    padding: 14px 10px;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
