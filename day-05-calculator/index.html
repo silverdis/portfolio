@@ -6,6 +6,14 @@
     <title>전자계산기</title>
     <link rel="stylesheet" href="style.css">
 <style>
+    .home-btn-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
     .home-btn {
         display: inline-block;
         margin: 24px 0 16px 0;
@@ -24,7 +32,9 @@
 </style>
 </head>
 <body>
-    <a href="../index.html" class="home-btn">홈</a>
+    <div class="home-btn-wrapper">
+      <a href="../index.html" class="home-btn">홈</a>
+    </div>
     <div class="calculator">
         <div class="display" id="display">0</div>
         <div class="buttons">
